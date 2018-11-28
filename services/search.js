@@ -13,6 +13,7 @@ async function search(timestamp, options, params) {
             const date = new Date(results[i].date).getTime();
             if (i === 0) data.mostRecent = date;
             if (date > isNew) data.newAds.push(results[i]);
+            // if (i < 5) data.newAds.push(results[i]);
         }
 
         return data;

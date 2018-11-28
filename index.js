@@ -1,11 +1,10 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const theJij = require('kijiji-scraper');
-const sendMail = require('./services/sendMail');
+const sendSMS = require('./services/sendSMS');
 require('dotenv').config();
 
 const searchLoop = require('./jobs/initPolling');
-
 
 const port = process.env.PORT || 3000;
 
@@ -50,7 +49,8 @@ app.listen(port, () => {
         radius: '2'
     };
     
-    searchLoop(5000, Date.now(), options1, params1);
-    searchLoop(5000, Date.now(), options2, params2);
-    // endMail();
+    const time = 5000;
+
+    searchLoop(time, Date.now(), options1, params1);
+    searchLoop(time, Date.now(), options2, params2);
 });
