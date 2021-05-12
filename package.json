@@ -16,7 +16,7 @@
     "express": "^4.16.4",
     "kijiji-scraper": "^4.0.4",
     "mongoose": "^5.3.11",
-    "nodemailer": "^4.7.0",
+    "nodemailer": "^6.4.16",
     "twilio": "^3.24.0"
   }
 }
